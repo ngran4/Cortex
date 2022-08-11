@@ -1,4 +1,4 @@
-.brand-logo {
+/* .brand-logo {
   margin-left: 15px;
 }
 
@@ -17,4 +17,62 @@
 
 .collection-item form {
   margin-top: -5px;
+} */
+/* ----------------------------------- BODY - GENERAL ----------------------------------- */
+body {
+  padding: 50px;
+  font: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+/* ----------------------------------- NAVIGATION + LOGIN ----------------------------------- */
+a {
+  color: white;
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #4E8397;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ADC5CF;
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
 }
