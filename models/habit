@@ -1,0 +1,23 @@
+const mongoose = require('mongoose');
+
+const habitSchema = new mongoose.Schema({
+    habit: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    streak: SVGAnimatedInteger,
+    habitLog: [habitLogSchema],
+});
+
+const habitLogSchema = new mongoose.Schema({
+    date: Date,
+    complete: Boolean,
+    note: String
+});
+
+
+module.exports =  mongoose.model('Habit', habitSchema)

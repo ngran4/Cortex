@@ -29,7 +29,7 @@ router.get('/oauth2callback', passport.authenticate(
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function(){ //< - req.logout comes from passport, and what it does is destorys the cookie keeping track of the user!
-    res.redirect('/') // redirect to home page
+    res.redirect('/landing') // redirect to landing page
   })
 })
 
