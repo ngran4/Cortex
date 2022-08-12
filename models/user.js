@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 // Create your User Model
 const userSchema = new mongoose.Schema({
@@ -9,9 +8,13 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     email: String,
-    avatar: String
+    profile: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref:'Profile',
+    }
 }, {
     timestamps:true
 });
 
 module.exports = mongoose.model('User', userSchema);
+
