@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
 
+const habitLogSchema = new mongoose.Schema({
+    date: Date,
+    complete: Boolean,
+    note: String
+});
+
 const habitSchema = new mongoose.Schema({
     habit: {
         type: String,
@@ -9,15 +15,9 @@ const habitSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    streak: SVGAnimatedInteger,
+    streak: Integer,
     habitLog: [habitLogSchema],
 });
 
-const habitLogSchema = new mongoose.Schema({
-    date: Date,
-    complete: Boolean,
-    note: String
-});
 
-
-module.exports =  mongoose.model('Habit', habitSchema)
+module.exports =  mongoose.model('Habit', habitSchema);
