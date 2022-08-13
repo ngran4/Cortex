@@ -15,7 +15,7 @@ const habitSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    streak: Integer,
+    streak: Number,
     habitLog: [habitLogSchema],
 });
 
