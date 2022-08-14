@@ -9,11 +9,11 @@ const habitLogSchema = new mongoose.Schema({
 const habitSchema = new mongoose.Schema({
     habit: {
         type: String,
-        required: true
+        // required: true
     },
     category: {
         type: String,
-        required: true
+        // required: true
     },
     streak: Number,
     habitLog: [habitLogSchema],

@@ -2,4 +2,20 @@
 
 <h1>habit tracker</h1>
 
+<table id="habits-list">
+    <thead>
+        <tr>
+            <th>Habit</th>
+            <th>Streak</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% habits.forEach(h => { %> 
+            <tr>
+                <td><%= h.habit %> </td>
+            </tr>
+        <% }); %> 
+    </tbody>
+</table>
+
 <%- include('../partials/footer')  %> 
