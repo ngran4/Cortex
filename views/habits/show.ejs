@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <div><%= habit.habit %></div>
-    <div><%= habit.category %></div>
+    <h1><%= habit.habit %></h1>
+    <div>Category: <%= habit.category %></div>
+    <form action="/habits/<%= habit._id %>/?_method=DELETE" method="POST">
+        <button class="delete-btn" type="submit">Delete</button>
+    </form>
 </section>
 
 <br>

@@ -5,9 +5,11 @@ module.exports = {
     index,
     new: newHabit,
     create,
-    show
+    show,
+    delete: deleteHabit,
 }
 
+// -------------- HOME -------------- //
 async function index(req, res) {
     try {
         const habitDoc = await Habit.find({})
@@ -21,6 +23,7 @@ async function index(req, res) {
     }
 };
 
+// -------------- ADD HABIT -------------- //
 function newHabit(req, res) {
     res.render('habits/new.ejs')
     console.log(newHabit, '<- new Habit')
@@ -41,6 +44,19 @@ async function create(req, res) {
     }
 }
 
+// -------------- DELETE HABIT -------------- //
+async function deleteHabit(req, res){
+
+    try {
+        const habit = await Habit.findByIdAndRemove(req.params.id);
+        res.redirect('/habits');
+
+    } catch(err) {
+        res.send(err)
+    }
+}
+
+// -------------- VIEW HABIT -------------- //
 async function show(req, res){
     console.log(req.params.id, 'req.params.id')
 
@@ -55,3 +71,23 @@ async function show(req, res){
         res.send(err)
     }
 }
+
+// -------------- STREAK -------------- //
+function updateStreak() {
+    const completeHabit = new Habit();
+    const complete = completeHabit.complete;
+    
+    for (let i=0; complete.length; i++) {
+
+    }
+}
+
+// loop through, count true
+// habitlog array
+// fin dmost recent, count back # trues
+
+// method = put
+// id, streak, habit
+// { habit: {
+//    streak: JSON.stringify(streak),
+//    habit_title: title }

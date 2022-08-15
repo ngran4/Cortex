@@ -20,7 +20,10 @@ const habitSchema = new mongoose.Schema({
         type: String,
         // required: true
     },
-    streak: Number,
+    streak: {
+        type: Number, 
+        default: 0
+    },
     habitLog: [habitLogSchema],
 });
 
