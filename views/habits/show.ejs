@@ -1,9 +1,16 @@
-<%- include('..partials/header') %>
+<%- include('../partials/header') %>
 
 <section id="show-page">
     <div><%= habit.habit %></div>
-    <div><%= habit.category </div>
+    <div><%= habit.category %></div>
 </section>
 
+<br>
+<br>
+<h2>Habit Log</h2>
+<form id="habit-log-form" method="POST" action="/habits/<%= habit._id %>/logs">
+    <label></label>
+</form>
 
-<%- include('..partials/header') %>
+
+<%- include('../partials/footer') %>

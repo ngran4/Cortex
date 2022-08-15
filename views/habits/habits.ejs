@@ -12,7 +12,8 @@
     <tbody>
         <% habits.forEach(h => { %> 
             <tr>
-                <td><a href="/habits/<%= h._id %>"><%= h.habit %></a></td>
+                <td><a href="/habits/<%= h._id %>">Details</a></td>
+                <td><%= h.habit %></td>
             </tr>
         <% }); %> 
     </tbody>

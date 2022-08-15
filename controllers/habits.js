@@ -4,7 +4,8 @@ const Profile = require('../models/profile');
 module.exports = {
     index,
     new: newHabit,
-    create
+    create,
+    show
 }
 
 async function index(req, res) {
@@ -46,7 +47,7 @@ async function show(req, res){
     try {
         const habitDoc = await Habit.findById(req.params.id)
         console.log(habitDoc, '<- habitDoc')
-        res.render('flights/show',{
+        res.render('habits/show', {
             habit: habitDoc
         })
 
