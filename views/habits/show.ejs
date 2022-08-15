@@ -9,8 +9,39 @@
 <br>
 <h2>Habit Log</h2>
 <form id="habit-log-form" method="POST" action="/habits/<%= habit._id %>/logs">
-    <label></label>
+    <label>Complete: </label>
+    <input type="checkbox" name="complete" checked>
+    <br>
+    <br>
+    <label>Notes:</label>
+    <input type="text" name="note">
+    <input type="submit" value="Submit">
 </form>
+<br>
+<br>
 
+<% if (habit.habitLog.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Date:</th>
+                <th>Completed:</th>
+                <th>Notes:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% habit.habitLog.forEach(function(h){ %> 
+                <tr>
+                    <td><%= h.createdAt.toLocaleDateString() %> </td>
+                    <td><%= h.complete %></td>
+                    <td><%= h.note %></td>
+                </tr>
+            <%}); %> 
+        </tbody>
+    </table>
+
+<% } else { %> 
+    <h5>No logs yet</h5>    
+<% } %>  
 
 <%- include('../partials/footer') %>

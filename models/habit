@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
-const habitLogSchema = new mongoose.Schema({
+const habitLogSchema = new mongoose.Schema(
+    {
     date: Date,
     complete: Boolean,
     note: String
-});
+    },
+    {
+        timestamps: true,
+    }
+);
 
 const habitSchema = new mongoose.Schema({
     habit: {
