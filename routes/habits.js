@@ -11,6 +11,5 @@ router.post('/', habitsController.create);
 router.delete('/:id', habitsController.delete);
 router.get('/:id/edit', habitsController.edit);
 router.put('/:id/update', habitsController.update);
-router.post('/:id', habitsController.updateStreak);
 
 module.exports = router;

@@ -65,9 +65,13 @@ async function show(req, res){
     try {
         const habitDoc = await Habit.findById(req.params.id)
         console.log(habitDoc, '<- habitDoc')
+
+        const streak = updateStreak(habitDoc)
+        console.log(streak, 'this is the streak')
+        
         res.render('habits/show', {
             habit: habitDoc,
-            streaks
+            
         })
 
     } catch(err){
@@ -103,19 +107,43 @@ async function updateHabit(req, res){
 
 
 // -------------- STREAK -------------- //
+function diffInDays(date1, date2) {
+    dt1 = new Date(date1);
+    dt2 = new Date(date2);
+    return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+};
+
 function updateStreak(habit) {
-    // const completeHabit = new Habit();
-    // const complete = completeHabit.complete;
-    let  streak = 0;
-    console.log(req.body.habit, '<- habit')
+    let length = habit.habitLog.length
+    const sortedDesc = habit.habitLog.sort(
+        (objA, objB) => Number(objB.createdAt) - Number(objA.createdAt),
+    );
+    console.log(sortedDesc, 'sortedDesc fn')
 
-    
-    for (let i=0; complete.length; i++) {
-
-    
+    let today = new Date().toLocaleDateString();
+    let streak = 0;
+    if (today = sortedDesc[0].createdAt) {
+        streak = 1;
     }
-
-    return streak
+    console.log(diffInDays(today, sortedDesc[0].createdAt));
+    if (today == sortedDesc[0].createdAt || diffInDays(today, sortedDesc[0].createdAt == 1)) {
+          for (let i = 0; i < length; i++) {
+            if(i== length - 1){
+                return streak
+            }
+          let diff = diffInDays(sortedDesc[i].createdAt, sortedDesc[i + 1].createdAt);
+          console.log(diff, 'this is the diff')
+        }}
+        //   if (diff == 1) {
+        //     streak += 1
+        //   } else if (diff > 1) {
+        //     return streak
+        //   }
+        // }
+        //   return streak
+        // } else {
+        //   return streak
+        // }
 };
 
 
