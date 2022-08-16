@@ -148,21 +148,35 @@ async function updateHabit(req, res){
 
 
 
-// // - Order (habit log?) array from most recent -> least recent dates (desc)
-// const sortDateDesc = habit.habitLog.sort(a, b) => 
+// Order (habit log?) array from most recent -> least recent dates (desc)
+let date = habit.habitLog.date;
 
-// - Define streak, set count = to 0
+const sortDateDesc = habit.habitLog.sort((a, b) => b.date - a.date);
 
-// - Set today = to current date
+// Define streak, set count = to 0
+let streakCount = 0;
 
-// - Make sure multiple logs in a day do not count towards streak:
-// 	- use .map to create array of dates, converted from createdAt timestamp for every log
-// 	- ?? remove duplicate dates? (.uniq) and form new array
+// Set today = to current date
+const today = new Date();
 
-// - take new array, use .reduce (acc, date)
-// 	- starting value (acc?) = today
-// 	- define yesterday = date of day before accumulator
-// 	- IF statment:
-// 		- if date = yesterday OR = today
-// 		- streak count += 1 and acc = date 
-// - return streak count
+
+// Make sure multiple logs in a day do not count towards streak:
+// use .map to create array of dates, converted from createdAt timestamp for every log
+let dateArr = habit.habitLog.map();
+// ?? remove duplicate dates? (.uniq) and form new array
+
+
+// Take new array, use .reduce (acc, date)
+// starting value (acc?) = today
+dateArr.reduce((today, date) => {
+    // define yesterday = date of day before accumulator
+    let yesterday = today.setDate(today.getDate() - 1);
+    // IF date = yesterday OR = today
+    if (date == yesterday || date == today) {
+    // streak count += 1 and acc = date 
+        streakCount += 1
+        today = date
+    }
+})
+    
+// return streak count
