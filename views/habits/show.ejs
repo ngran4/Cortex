@@ -36,7 +36,7 @@
         <tbody>
             <% habit.habitLog.forEach(function(h){ %> 
                 <tr>
-                    <td><%= h.createdAt.toLocaleDateString() %> </td>
+                    <td><%= h.date.toLocaleDateString() %> </td>
                     <td><%= h.complete %></td>
                     <td><%= h.note %></td>
                 </tr>
