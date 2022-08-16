@@ -1,0 +1,19 @@
+<%- include('../partials/header') %> 
+<h1> edit pg</h1>
+<form action="/habits/<%= habit._id %>/update?_method=PUT" method="POST">
+    <label>Habit</label>
+    <input type="text" name="habit" value="<%= habit.habit %>">
+    <label>Category</label>
+    <select name="category">
+        <option value="<%= habit.category %>"><%= habit.category %> </option>
+        <option value="health">Health</option>
+        <option value="productivity">Productivity</option>
+        <option value="self-care">Self-care</option>
+        <option value="household">Household</option>
+        <option value="creativity">Creativity</option>
+        <option value="other">Other</option>
+    </select>
+    <input type="submit" value="Update Habit">
+</form>
+
+<%- include('../partials/footer') %> 

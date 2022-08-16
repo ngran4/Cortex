@@ -7,6 +7,8 @@ module.exports = {
     create,
     show,
     delete: deleteHabit,
+    edit: editHabit,
+    update: updateHabit
 }
 
 // -------------- HOME -------------- //
@@ -72,6 +74,33 @@ async function show(req, res){
     }
 }
 
+// -------------- EDIT/UPDATE -------------- //
+async function editHabit(req, res){
+
+    try {
+        const habitDoc = await Habit.findById(req.params.id, req.body)
+        res.render('habits/edit', {
+            habit: habitDoc
+        })
+
+    } catch(err){
+        res.send(err);
+    }
+};
+
+async function updateHabit(req, res){
+    
+    try {
+        const habitDoc = await Habit.findByIdAndUpdate(req.params.id, req.body)
+
+        res.redirect(`/habits/${habitDoc._id}`)
+
+    } catch(err){
+        res.send(err)
+    }
+}
+
+
 // -------------- STREAK -------------- //
 function updateStreak() {
     const completeHabit = new Habit();
@@ -82,8 +111,10 @@ function updateStreak() {
     }
 }
 
+
 // loop through, count true
-// habitlog array
+// habitlog array -- set to empty array?
+
 // fin dmost recent, count back # trues
 
 // method = put

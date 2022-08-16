@@ -8,6 +8,8 @@ router.get('/new', habitsController.new);
 router.get('/:id', habitsController.show);
 router.post('/', habitsController.create);
 
-router.delete('/:id', habitsController.delete)
+router.delete('/:id', habitsController.delete);
+router.get('/:id/edit', habitsController.edit);
+router.put('/:id/update', habitsController.update);
 
 module.exports = router;
