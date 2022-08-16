@@ -66,7 +66,8 @@ async function show(req, res){
         const habitDoc = await Habit.findById(req.params.id)
         console.log(habitDoc, '<- habitDoc')
         res.render('habits/show', {
-            habit: habitDoc
+            habit: habitDoc,
+            streaks
         })
 
     } catch(err){
@@ -102,14 +103,20 @@ async function updateHabit(req, res){
 
 
 // -------------- STREAK -------------- //
-function updateStreak() {
-    const completeHabit = new Habit();
-    const complete = completeHabit.complete;
+function updateStreak(habit) {
+    // const completeHabit = new Habit();
+    // const complete = completeHabit.complete;
+    let  streak = 0;
+    console.log(req.body.habit, '<- habit')
+
     
     for (let i=0; complete.length; i++) {
 
+    
     }
-}
+
+    return streak
+};
 
 
 // loop through, count true
