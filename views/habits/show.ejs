@@ -11,15 +11,17 @@
 
 <br>
 <br>
-<h2>Habit Log</h2>
+<h3>Habit Log</h3>
 <form id="habit-log-form" method="POST" action="/habits/<%= habit._id %>/logs">
-    <label>Complete: </label>
-    <input type="checkbox" name="complete" checked>
-    <br>
-    <br>
-    <label>Notes:</label>
-    <input type="text" name="note">
-    <input type="submit" value="Submit">
+    <div class="form-checkbox">
+        <label for="input-complete">Complete: </label>
+        <input type="checkbox" class="form-control" id="input-complete" name="complete" checked>
+    </div>   
+    <div class="form-text">
+        <label for="input-notes">Notes:</label>
+        <input type="text" name="note">
+        <input type="submit" value="Submit">
+    </div>    
 </form>
 <br>
 <br>

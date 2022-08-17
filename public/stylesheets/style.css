@@ -23,7 +23,8 @@ body {
   padding: 50px;
   font: 14px;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color:  #e7d7c3;
+  background: #3D3E3D;
+  color: white;
 }
 
 body {
@@ -41,14 +42,13 @@ a {
   color: white;
 }
 
-body > nav {
+.navbar {
   grid-area: nav;
-  background-color: #4E8397;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 20px 0 30px;
+  padding: 0 30px 0 30px;
 }
 
 /* Style the links inside the navigation bar */
@@ -72,8 +72,21 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   height: 34px;
+  color: white;
 }
 
 .login img {
   height: 30px;
 }
+
+
+
+h1{
+  display: flex;
+  font-family: 'Monoton', cursive;
+}
+
+/* h1 > #main-title  {
+  justify-content: center;
+  align-items: center;
+} */

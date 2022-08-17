@@ -1,22 +1,29 @@
 <%- include('../partials/header')  %> 
 
-<h1>habit tracker</h1>
+<div class="container">
+    <br>
+    <h1 id="main-title">habits</h1>
+    <br>
 
-<table id="habits-list">
-    <thead>
-        <tr>
-            <th>Habit</th>
-            <th>Streak</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% habits.forEach(h => { %> 
+    <table class="table table-striped table-dark">
+        <thead>
             <tr>
-                <td><a href="/habits/<%= h._id %>">Details</a></td>
-                <td><%= h.habit %></td>
+                <th scope="col"> </th>
+                <th scope="col">Habit</th>
+                <th scope="col">Streak</th>
             </tr>
-        <% }); %> 
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <% habits.forEach(h => { %> 
+                <tr>
+                    <th scope="row"> </th>
+                    <td><%= h.habit %></td>
+                    <td>v streaky</td>
+                    <td><a href="/habits/<%= h._id %>">Details</a></td>
+                </tr>
+            <% }); %> 
+        </tbody>
+    </table>
+</div>
 
 <%- include('../partials/footer')  %> 
