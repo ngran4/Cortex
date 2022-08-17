@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<!------------------- HABIT INFO ------------------->
 <section id="show-page">
     <h1><%= habit.habit %></h1>
     <div>Category: <%= habit.category %></div>
@@ -11,21 +12,25 @@
 
 <br>
 <br>
+
+
+<!------------------- HABIT LOG FORM ------------------->
 <h3>Habit Log</h3>
 <form id="habit-log-form" method="POST" action="/habits/<%= habit._id %>/logs">
-    <div class="form-checkbox">
+    <!-- <div class="form-checkbox">
         <label for="input-complete">Complete: </label>
-        <input type="checkbox" class="form-control" id="input-complete" name="complete" checked>
-    </div>   
+        <input type="checkbox" class="form-control" id="input-complete" name="complete" onChange="this.form.submit()" checked >
+    </div>    -->
     <div class="form-text">
         <label for="input-notes">Notes:</label>
-        <input type="text" name="note">
-        <input type="submit" value="Submit">
+        <input type="text" name="note" placeholder="Any notes?">
+        <input type="submit" value="Complete">
     </div>    
 </form>
 <br>
 <br>
 
+<!------------------- HABIT LOG TABLE ------------------->
 <% if (habit.habitLog.length) { %>
     <table>
         <thead>

@@ -6,7 +6,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-
+const events = require('events');
 
 // ------ SESSION MIDDLEWARE------ //
 const session = require('express-session');
@@ -17,6 +17,8 @@ const indexRoutes = require('./routes/index');
 const habitsRouter = require('./routes/habits');
 const logsRouter = require('./routes/logs');
 
+//create an object of EventEmitter class from events module
+const myEmitter = new events.EventEmitter();
 
 // create the Express app
 const app = express();
