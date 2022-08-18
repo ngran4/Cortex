@@ -66,8 +66,7 @@ async function show(req, res){
         const habitDoc = await Habit.findById(req.params.id)
         console.log(habitDoc, '<- habitDoc')
 
-        // const streak = updateStreak(habitDoc)
-        // console.log(streak, 'this is the streak')
+        sortDateDesc = habitDoc.habitLog.sort((a, b) => b.createdAt - a.createdAt);
         
         res.render('habits/show', {
             habit: habitDoc,
@@ -107,7 +106,6 @@ async function updateHabit(req, res){
 
 
 // -------------- STREAK -------------- //
-
 
 // function diffInDays(date1, date2) {
 //     dt1 = new Date(date1);

@@ -37,6 +37,10 @@ body {
     "main"
 }
 
+main > .landing-pg{
+  
+}
+
 /* ----------------------------------- NAVIGATION + LOGIN ----------------------------------- */
 a {
   color: white;

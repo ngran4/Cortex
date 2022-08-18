@@ -1,18 +1,22 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/habits" method="POST">
-    <label>Habit</label>
-    <input type="text" name="habit">
-    <label>Category</label>
-    <select name="category">
-        <option value="health">Health</option>
-        <option value="productivity">Productivity</option>
-        <option value="self-care">Self-care</option>
-        <option value="household">Household</option>
-        <option value="creativity">Creativity</option>
-        <option value="other">Other</option>
-    </select>
-    <input type="submit" value="Add Habit">
+    <div class="form-habit">
+        <label>Habit</label>
+        <input class="form-control" type="text" name="habit">
+    </div>
+    <div class="form-category">
+        <label>Category</label>
+        <select class="form-control" name="category">
+            <option value="health">Health</option>
+            <option value="productivity">Productivity</option>
+            <option value="self-care">Self-care</option>
+            <option value="household">Household</option>
+            <option value="creativity">Creativity</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+        <button type="submit" class="btn btn-primary">Add Habit</button>
 </form>
 
 
