@@ -26,7 +26,7 @@ body {
   background: #3D3E3D;
   color: white;
 }
-
+/* 
 body {
   margin: 0;
   height: 100vh;
@@ -35,7 +35,7 @@ body {
   grid-template-areas:
     "nav"
     "main"
-}
+} */
 
 /* body > .landing-pg{
   padding: 50px;
@@ -57,11 +57,11 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px 0 30px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Style the links inside the navigation bar */
 nav a {
-  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -83,21 +83,10 @@ nav a:hover {
   color: white;
 }
 
-.login img {
-  height: 30px;
-}
-
-
-
 h1{
   display: flex;
   font-family: 'Monoton', cursive;
 }
-
-/* h1 > #main-title  {
-  justify-content: center;
-  align-items: center;
-} */
 
 /* ----------------------------------- LANDING ----------------------------------- */
 .jumbotron{
@@ -122,6 +111,30 @@ h1{
 .jumbotron .lead {
   font-size: 20px;
   font-weight: 400;
+}
+
+/* ----------------------------------- HABITS MAIN ----------------------------------- */
+
+#main-title{
+  font-size: 40px;
+  /* text-align: center; */
+}
+
+.table a:link{
+  text-decoration: none;
+}
+
+.table a:hover{
+  background-color: #ADC5CF;
+  color: white;
+}
+
+.table{
+  border-collapse: separate;
+  border-spacing:0 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 23px;
+  color: white;
 }
 
 /* ----------------------------------- SHOW ----------------------------------- */
