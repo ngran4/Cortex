@@ -4,7 +4,7 @@ According to a study at Duke University in 2006, more than 40% of our daily beha
 Cortex is a web application designed to help you achieve long-term goals by creating and maintaining good habits. Users can add as many habits as they want to track, and view their progress as a "streak" which shows how many days in a row they have completed the habit. 
 
 # Visuals
-![Imgur](https://i.imgur.com/tIED3W3.png)
+![Imgur](https://i.imgur.com/tIED3W3l.png)
 ![Imgur](https://i.imgur.com/VX6lOGFl.png)
 ![Imgur](https://i.imgur.com/oOZT6c2l.png)
 ![Imgur](https://i.imgur.com/eaDHLj9l.png)
