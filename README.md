@@ -6,7 +6,7 @@ Cortex is a web application designed to help you achieve long-term goals by crea
 ![Imgur](https://i.imgur.com/OAulxA5l.png)
 ![Imgur](https://i.imgur.com/VX6lOGFl.png)
 ![Imgur](https://i.imgur.com/oOZT6c2l.png)
-![Imgur](https://i.imgur.com/qfVuUcyl.png)
+![Imgur](https://i.imgur.com/eaDHLj9l.png)
 
 # Technologies Used
 - HTML
