@@ -23,11 +23,6 @@ https://p2-habit-tracker.herokuapp.com/
 Project Planning:
 https://trello.com/b/MRXCuEr3/project-2
 
-# Original Wireframe 
-
-![Imgur](https://i.imgur.com/wbtUjPMh.png)
-
-![Imgur](https://i.imgur.com/LaEHtiQh.png)
 
 # IceBox
 - Streak progress visuals 
