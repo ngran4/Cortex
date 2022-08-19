@@ -12,6 +12,8 @@ Cortex is a web application designed to help you achieve long-term goals by crea
 - HTML
 - CSS
 - Javascript
+- Mongoose/MongoDB
+- Express
 - Bootstrap
 - Unsplash
 

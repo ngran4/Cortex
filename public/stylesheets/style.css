@@ -148,3 +148,10 @@ h4 {
   margin-top: 20px;
   font-size:20px;
 }
+
+/* ----------------------------------- NEW ----------------------------------- */
+.new-form{
+  justify-content: center;
+  padding-top: 40px;
+  padding-left: 35%;
+}
