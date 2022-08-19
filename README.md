@@ -1,35 +1,35 @@
-# passport-boilerplate
+# Cortex Habit Tracker
+Our brains love to conserve energy, and one of the ways it does this is through a cognitive process called "chunking," which is when the brain converts an activity--or sequence of activities--into an automatic behavior. According to a study at Duke University in 2006, more than 40% of our daily behavior is habitual. ...
+
+Cortex is a web application designed to help you achieve long-term goals by creating and maintaining good habits. Users can add as many habits as they want to track, and view their progress as a "streak" which shows how many days in a row they have completed the habit. 
+
+![Imgur](https://i.imgur.com/OAulxA5l.png)
+![Imgur](https://i.imgur.com/VX6lOGFl.png)
+![Imgur](https://i.imgur.com/LGSf6SAl.png)
+![Imgur](https://i.imgur.com/qfVuUcyl.png)
+
+# Technologies Used
+- HTML
+- CSS
+- Javascript
+- Bootstrap
+- Unsplash
 
 
-This is your passport boilerplate.
+# Getting Started
+App Link:
+https://p2-habit-tracker.herokuapp.com/
 
-## Setup 
+Project Planning:
+https://trello.com/b/MRXCuEr3/project-2
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+# Original Wireframe 
 
+![Imgur](https://i.imgur.com/wbtUjPMh.png)
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+![Imgur](https://i.imgur.com/LaEHtiQh.png)
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
-
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
-
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+# IceBox
+- Streak progress visuals 
+- Facts/information on the science of habit formation
+- Multi-user interface to connect with others and encourage them on their journey 
