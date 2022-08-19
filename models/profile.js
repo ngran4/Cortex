@@ -4,10 +4,10 @@ const profileSchema = new mongoose.Schema({
     name: String,
     avatar: String,
     habits: {
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Habits'}
+      type: mongoose.Schema.Types.ObjectId, 
+      ref: 'Habits'}
     }, {
-        timestamps: true
+      timestamps: true
     });
 
 module.exports = mongoose.model('Profile', profileSchema);

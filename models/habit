@@ -1,33 +1,33 @@
 const mongoose = require('mongoose');
 
 const habitLogSchema = new mongoose.Schema(
-    {
-    date: {
-        type: Date,
-        default: () => { return new Date() }
-    },
-    // complete: Boolean,
-    note: String
-    },
-    {
-        timestamps: true,
-    }
+  {
+  date: {
+    type: Date,
+    default: () => { return new Date() }
+  },
+  // complete: Boolean,
+  note: String
+  },
+  {
+    timestamps: true,
+  }
 );
 
 const habitSchema = new mongoose.Schema({
-    habit: {
-        type: String,
-        // required: true
-    },
-    category: {
-        type: String,
-        // required: true
-    },
-    streak: {
-        type: Number, 
-        default: 0
-    },
-    habitLog: [habitLogSchema],
+  habit: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  streak: {
+    type: Number, 
+    default: 0
+  },
+  habitLog: [habitLogSchema],
 });
 
 

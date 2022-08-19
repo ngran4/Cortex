@@ -22,28 +22,10 @@
 body {
   padding: 50px;
   font: 14px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: #3D3E3D;
   color: white;
 }
-/* 
-body {
-  margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas:
-    "nav"
-    "main"
-} */
-
-/* body > .landing-pg{
-  padding: 50px;
-  font: 14px;
-  color: white;
-  background-image: linear-gradient(to right top, #f038b3, #e647b8, #dc53bc, #d25dbf, #c865c1, #c362c2, #be60c4, #b95dc5, #b74fc7, #b43fc9, #b12bcc, #ad07ce);
-
-} */
 
 /* ----------------------------------- NAVIGATION + LOGIN ----------------------------------- */
 a {
@@ -60,13 +42,22 @@ a {
   font-family: 'Quicksand', sans-serif;
 }
 
+.navbar-brand {
+  font-family: 'Monoton', cursive;
+  font-size: 25px;
+}
+
+.nav-item {
+  font-size: 18px;
+}
+
 /* Style the links inside the navigation bar */
 nav a {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  margin-left:50px;
 }
 
 /* Change the color of links on hover */
@@ -138,3 +129,22 @@ h1{
 }
 
 /* ----------------------------------- SHOW ----------------------------------- */
+
+h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 23px;
+}
+
+#edit-btn{
+  margin-top: 10px;
+}
+
+#habit {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+#show-tbl {
+  margin-top: 20px;
+  font-size:20px;
+}
