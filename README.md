@@ -1,5 +1,5 @@
 # Cortex Habit Tracker
-Our brains love to conserve energy, and one of the ways it does this is through a cognitive process called "chunking," which is when the brain converts an activity--or sequence of activities--into an automatic behavior. According to a study at Duke University in 2006, more than 40% of our daily behavior is habitual. ...
+According to a study at Duke University in 2006, more than 40% of our daily behavior is habitual. This is because our brains love to conserve energy, and one of the ways it does this is through a cognitive process called "chunking," which is when the brain converts an activity--or sequence of activities--into an automatic behavior.  ...
 
 Cortex is a web application designed to help you achieve long-term goals by creating and maintaining good habits. Users can add as many habits as they want to track, and view their progress as a "streak" which shows how many days in a row they have completed the habit. 
 
