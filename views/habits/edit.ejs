@@ -1,5 +1,5 @@
 <%- include('../partials/header') %> 
-<h1> edit pg</h1>
+<h1> edit</h1>
 <form action="/habits/<%= habit._id %>/update?_method=PUT" method="POST">
     <label>Habit</label>
     <input type="text" name="habit" value="<%= habit.habit %>">

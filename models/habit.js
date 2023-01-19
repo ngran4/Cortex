@@ -6,7 +6,6 @@ const habitLogSchema = new mongoose.Schema(
     type: Date,
     default: () => { return new Date() }
   },
-  // complete: Boolean,
   note: String
   },
   {

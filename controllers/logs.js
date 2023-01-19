@@ -29,7 +29,6 @@ async function create(req, res){
 
 // -------------- STREAK -------------- //
 
-
 function diffInHours(date2, date1){
   console.log(date1, date2, 'these are the dates')
   // Once log is submitted, set date & store in variable
@@ -44,6 +43,7 @@ function diffInHours(date2, date1){
 
   return timeElapsedToHr;
 }
+
 
 function logStreak(streakCount, habit){
   // order dates starting from most recent
