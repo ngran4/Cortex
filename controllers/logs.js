@@ -45,30 +45,54 @@ function diffInHours(date2, date1){
 }
 
 
-function logStreak(streakCount, habit){
+// function logStreak(streakCount, habit){
+//   // order dates starting from most recent
+//   sortDateDesc = habit.habitLog.sort((a, b) => b.date - a.date);
+
+//   console.log(sortDateDesc, 'sorted date')
+
+//   let today = new Date();
+//   console.log(today, sortDateDesc[0].date)
+
+//   let diff = diffInHours(today, sortDateDesc[0].date);
+//   console.log(diff, 'diff')
+//   // if more than 48 reset streak 
+//   // if less than 24 hr dont add streak
+//   // otherwise add to streak
+//   streakCount = 1;
+
+//   if (diff > 48) {
+//       return streakCount = 0
+//   } else if(diff < 24){
+//       return streakCount
+//   } else{
+//       return streakCount += 1
+//   }
+
+// }
+
+function logStreak(streakCount, habit) {
   // order dates starting from most recent
   sortDateDesc = habit.habitLog.sort((a, b) => b.date - a.date);
 
-  console.log(sortDateDesc, 'sorted date')
-
-  let today = new Date();
-  console.log(today, sortDateDesc[0].date)
-
-  let diff = diffInHours(today, sortDateDesc[0].date);
-  console.log(diff, 'diff')
-  // if more than 48 reset streak 
-  // if less than 24 hr dont add streak
-  // otherwise add to streak
-  streakCount = 1;
-
-  if (diff > 48) {
-      return streakCount = 0
-  } else if(diff < 24){
-      return streakCount
-  } else{
-      return streakCount += 1
+  // check if habitLog array is empty
+  if (sortDateDesc.length === 0) {
+    return 0; // return a streak count of 0
   }
 
+  let today = new Date();
+  let diff = diffInHours(today, sortDateDesc[0].date);
+
+  // if more than 48 reset streak
+  // if less than 24 hr dont add streak
+  // otherwise add to streak
+  if (diff > 48) {
+    return 0; // reset streak
+  } else if (diff < 24) {
+    return streakCount;
+  } else {
+    return streakCount + 1;
+  }
 }
 
 // wait, [0] will always be the same........
