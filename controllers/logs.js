@@ -11,7 +11,7 @@ async function create(req, res){
   // req.body.complete = !!req.body.complete; // forces the value to a boolean
 
   try {
-    const habitDoc = await Habit.findById(req.params.id)
+    const habitDoc = await Habit.findOne({ _id: req.params.id, user: req.user._id }) // Only retrieve the habit if it belongs to the currently logged in user
     console.log(habitDoc, '<- habitDoc')
 
     let streak = logStreak(habitDoc.streak, habitDoc);

@@ -15,7 +15,7 @@ module.exports = {
 async function index(req, res) {
 
   try {
-    const habitDoc = await Habit.find({})
+    const habitDoc = await Habit.find({ user: req.user._id })
 
     res.render('habits/habits.ejs', {
       habits: habitDoc
@@ -36,10 +36,12 @@ async function create(req, res) {
   console.log(req.body)
 
   try {
-    const habitDocCreated = await Habit.create(req.body)
+    const habitDocCreated = await Habit.create({
+      ...req.body,
+      user: req.user._id // Add currently logged in user's ID to habit
+    })
     console.log(habitDocCreated, 'habit doc created in db')
     res.redirect('/habits')
-    // res.redirect(`habits/${habitDocCreated._id}`)
   
   } catch(err){
     res.send(err)
@@ -64,7 +66,7 @@ async function show(req, res){
   console.log(req.params.id, 'req.params.id')
 
   try {
-    const habitDoc = await Habit.findById(req.params.id)
+    const habitDoc = await Habit.findOne({ _id: req.params.id, user: req.user._id }) // Only retrieve the habit if it belongs to the currently logged in user
     console.log(habitDoc, '<- habitDoc')
 
     sortDateDesc = habitDoc.habitLog.sort((a, b) => b.createdAt - a.createdAt);

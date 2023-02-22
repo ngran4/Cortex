@@ -27,6 +27,10 @@ const habitSchema = new mongoose.Schema({
     default: 0
   },
   habitLog: [habitLogSchema],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 });
 
 
