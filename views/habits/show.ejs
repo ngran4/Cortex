@@ -9,7 +9,7 @@
         <h4 id="cat">Category: <%= habit.category %></h4>
         <br>
         <form action="/habits/<%= habit._id %>/?_method=DELETE" method="POST">
-            <button id="delete-btn" class="btn btn-outline-danger btn-sm" type="submit">Delete</button>
+            <button id="delete-btn"  class="btn btn-outline-danger btn-sm" type="submit">Delete</button>
         </form>
         <a id="edit-btn" class="btn btn-outline-secondary btn-sm" href="/habits/<%= habit._id %>/edit">Edit</a>
       </section>
@@ -25,7 +25,7 @@
               <button type="submit" class="btn btn-success">Mark Complete</button>
       </form>
     </div>
-<!------------------- HABIT LOG TABLE ------------------->    
+<!------------------- HABIT LOG TABLE ------------------->
     <div class="col-md-7">
       <% if (habit.habitLog.length) { %>
         <table id="show-tbl" class="table">
@@ -38,8 +38,8 @@
             <tbody>
                 <% habit.habitLog.forEach(function(h){ %> 
                     <tr>
-                        <td scope="row"><%= h.createdAt.toLocaleDateString() %> </td>
-                        <td scope="row"><%= h.note %></td>
+                    <td scope="row"><%= h.createdAt.toLocaleDateString() %> </td>
+                    <td scope="row"><%= h.note %></td>
                     </tr>
                 <%}); %> 
             </tbody>

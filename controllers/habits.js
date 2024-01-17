@@ -21,7 +21,7 @@ async function index(req, res) {
       habits: habitDoc
     });
 
-  } catch(err){
+  } catch (err) {
     res.send(err)
   }
 };
@@ -40,27 +40,27 @@ async function create(req, res) {
     console.log(habitDocCreated, 'habit doc created in db')
     res.redirect('/habits')
     // res.redirect(`habits/${habitDocCreated._id}`)
-  
-  } catch(err){
+
+  } catch (err) {
     res.send(err)
   }
 }
 
 // -------------- DELETE HABIT -------------- //
-async function deleteHabit(req, res){
+async function deleteHabit(req, res) {
 
   try {
     const habit = await Habit.findByIdAndRemove(req.params.id);
-    
+
     res.redirect('/habits');
 
-  } catch(err) {
+  } catch (err) {
     res.send(err)
   }
 }
 
 // -------------- VIEW HABIT -------------- //
-async function show(req, res){
+async function show(req, res) {
   console.log(req.params.id, 'req.params.id')
 
   try {
@@ -68,40 +68,40 @@ async function show(req, res){
     console.log(habitDoc, '<- habitDoc')
 
     sortDateDesc = habitDoc.habitLog.sort((a, b) => b.createdAt - a.createdAt);
-    
+
     res.render('habits/show', {
       habit: habitDoc,
-        
+
     })
 
-  } catch(err){
-      res.send(err)
+  } catch (err) {
+    res.send(err)
   }
 }
 
 // -------------- EDIT/UPDATE -------------- //
-async function editHabit(req, res){
+async function editHabit(req, res) {
 
   try {
     const habitDoc = await Habit.findById(req.params.id, req.body)
-    
-    res.render('habits/edit', {
-        habit: habitDoc
-      })
 
-  } catch(err){
-      res.send(err);
+    res.render('habits/edit', {
+      habit: habitDoc
+    })
+
+  } catch (err) {
+    res.send(err);
   }
 };
 
-async function updateHabit(req, res){
-    
+async function updateHabit(req, res) {
+
   try {
     const habitDoc = await Habit.findByIdAndUpdate(req.params.id, req.body)
 
     res.redirect(`/habits/${habitDoc._id}`)
 
-  } catch(err){
+  } catch (err) {
     res.send(err)
   }
 }

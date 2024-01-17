@@ -7,14 +7,14 @@
     <table class="table" id="main-tb">
       <thead>
         <tr>
-          <th scope="col">Habit</th>
+          <th scope="col">Delete</th>
           <th scope="col">Streak</th>
         </tr>
       </thead>
       <tbody>
         <% habits.forEach(h => { %> 
           <tr>
-            <td scope="row"><a href="/habits/<%= h._id %>"><%= h.habit %></a></td>
+            <td scope="row"><a href="/habits/<%= h._id %>"></a><%= h.habit %></a></td>
             <td scope="row"><%= h.streak %> </td>
           </tr>
         <% }); %> 
